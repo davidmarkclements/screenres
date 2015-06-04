@@ -15,9 +15,8 @@ $ npm install screenres --save
 
 ```js
 var sr = require('screenres');
-
 console.log(sr.get()); // [1440, 900]
-``
+```
 
 #### set
 
