@@ -1,0 +1,11 @@
+    screenres
+    screenres [h, v]
+
+    With no arguments, outputs current resolution of main display,
+
+      $ screenres
+      1440x900
+
+    With two arguments sets resolution horizontal and vertical dimensions
+      
+      $ screenres 800 600 #changes screen resolution
