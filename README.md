@@ -23,7 +23,7 @@ console.log(sr.get()); // [1440, 900]
 ```js
 var sr = require('screenres');
 sr.set(800, 600));
-``
+```
 
 ### CLI
 
