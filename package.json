@@ -1,4 +1,5 @@
 {
+  "name": "screenres",
   "main": "index.js",
   "scripts": {
     "configure": "node-gyp configure",
