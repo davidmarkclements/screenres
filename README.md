@@ -86,6 +86,9 @@ That should be it `npm run configure; npm run build`.
 
 Then.. send a PR :)
 
+## Kudos
+
+Sponsored by [nearForm](http://nearform.com)
 
 
 
