@@ -4,7 +4,8 @@
   "scripts": {
     "configure": "node-gyp configure",
     "build": "node-gyp build",
-    "test": "mocha"
+    "test": "mocha",
+    "install": "node-gyp rebuild"
   },
   "devDependencies": {
     "nan": "^1.8.4",
@@ -15,5 +16,21 @@
     "bindings": "^1.2.1",
     "minimist": "^1.1.1",
     "nan": "^1.8.4"
-  }
+  },
+  "gypfile": true,
+  "description": "Get and set screen resolutions",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidmarkclements/screenres.git"
+  },
+  "author": "David Mark Clements",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidmarkclements/screenres/issues"
+  },
+  "homepage": "https://github.com/davidmarkclements/screenres"
 }
