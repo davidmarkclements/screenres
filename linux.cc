@@ -65,6 +65,7 @@ int changeRes(int h, int v) {
 
   system(setres);
 
+  return 0;
 }
 
 #endif
