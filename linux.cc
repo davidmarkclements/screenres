@@ -33,6 +33,7 @@ int changeRes(int h, int v) {
   char newmode[130];
   char addmode[65];
   char mode[21];
+  char setres[60];
 
   fp = popen("/usr/bin/env xrandr 2> /dev/null | grep -E ' connected (primary )?[1-9]+' | sed -e 's/\\([A-Z0-9]\\+\\) connected.*/\\1/' | cut -d' ' -f1", "r");
   if (!fp) { return ERR_UNABLE_TO_CHANGE_RESOLUTION; }
@@ -57,6 +58,13 @@ int changeRes(int h, int v) {
   strcat(addmode, mode);
 
   system(addmode);
+  strcpy(setres, "/usr/bin/env xrandr --output ");
+  strcat(setres, active);
+  strcat(setres, " --mode ");
+  strcat(setres, mode);
+
+  system(setres);
+
 }
 
 #endif
