@@ -12,7 +12,7 @@ MASTER/MAIN
 ### Programmatic
 
 ```sh
-$ npm install screenres@next --save
+$ npm install screenres@2.0.0-rc1 --save
 ```
 
 #### get
