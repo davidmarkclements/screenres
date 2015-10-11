@@ -3,12 +3,16 @@
 
 Get and set screen resolutions
 
+NOTE - ONLY LINUX SUPPORTED AT PRESENT ON NEXT
+FOR OS X SUPPORT ON NODE 0.10 ONLY INSTALL 
+MASTER/MAIN
+
 ## Usage
 
 ### Programmatic
 
 ```sh
-$ npm install screenres --save
+$ npm install screenres@next --save
 ```
 
 #### get
