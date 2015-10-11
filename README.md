@@ -11,7 +11,7 @@ FOR OS X SUPPORT ON NODE 0.10 ONLY INSTALL screenres 1.x.x
 ### Programmatic
 
 ```sh
-$ npm install screenres@2.0.0-rc1 --save
+$ npm install screenres@next --save
 ```
 
 #### get
