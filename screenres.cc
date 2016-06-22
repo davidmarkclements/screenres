@@ -21,29 +21,31 @@ using v8::FunctionTemplate;
 
 void init(Handle<Object>);
 
-NAN_METHOD(set) {
-  NanScope();
-  int code = changeRes(args[0]->Uint32Value(), args[1]->Uint32Value());
+void set(const Nan::FunctionCallbackInfo<v8::Value>& info) {
+
+  int code = changeRes(info[0]->Uint32Value(), info[1]->Uint32Value());
 
   if (!code) {
-  NanReturnUndefined();
+  return;
   } else {
-    NanReturnValue(NanNew<Number>(code));
+    //NanReturnValue(Nan::New<Number>(code));
+    info.GetReturnValue().Set(code);
   }
 }
 
-NAN_METHOD(get) {
-  NanScope();
+void get(const Nan::FunctionCallbackInfo<v8::Value>& info) {
+
   Resolution res = fetchRes();
-  Local<Array> arr = NanNew<Array>(2);
-  arr->Set(0, NanNew<Number>(res.width));
-  arr->Set(1, NanNew<Number>(res.height));
-  NanReturnValue(arr);
+  Local<Array> arr = Nan::New<Array>(2);
+  arr->Set(0, Nan::New<Number>(res.width));
+  arr->Set(1, Nan::New<Number>(res.height));
+  info.GetReturnValue().Set(arr);
+  //NanReturnValue(arr);
 }
 
 void init(Handle<Object> exports) {
-  exports->Set(NanNew<String>("set"), NanNew<FunctionTemplate>(set)->GetFunction());
-  exports->Set(NanNew<String>("get"), NanNew<FunctionTemplate>(get)->GetFunction());
+  exports->Set(Nan::New("set").ToLocalChecked(), Nan::New<FunctionTemplate>(set)->GetFunction());
+  exports->Set(Nan::New("get").ToLocalChecked(), Nan::New<FunctionTemplate>(get)->GetFunction());
 }
 
 NODE_MODULE(screenres, init);

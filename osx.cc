@@ -3,11 +3,11 @@
 *  David Mark Clements 2015
 *  @davidmarkclem
 *
-*  Based on 'setgetscreenres' 
+*  Based on 'setgetscreenres'
 *   juanfc 2009-04-13
 *   Based on newscreen
 *      Created by Jeffrey Osterman on 10/30/07.
-*      Copyright 2007 Jeffrey Osterman. All rights reserved. 
+*      Copyright 2007 Jeffrey Osterman. All rights reserved.
 *      PROVIDED AS IS AND WITH NO WARRANTIES WHATSOEVER
 *      http://forums.macosxhints.com/showthread.php?t=59575
 *
@@ -26,8 +26,8 @@ Resolution fetchRes() {
     CGRect screenFrame = CGDisplayBounds(kCGDirectMainDisplay);
     CGSize screenSize  = screenFrame.size;
     Resolution res = {
-      .width = screenSize.width,
-      .height = screenSize.height
+      .width = (int)screenSize.width,
+      .height = (int)screenSize.height
     };
     return res;
 }
@@ -36,7 +36,7 @@ int changeRes (int h, int v) {
   CFDictionaryRef switchMode;   // mode to switch to
   CGDirectDisplayID mainDisplay;  // ID of main display
   CFDictionaryRef CGDisplayCurrentMode(CGDirectDisplayID display);
-  
+
   if (!h || !v) {
     return ERR_MISSING_H_OR_V;
   }
