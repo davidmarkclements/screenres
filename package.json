@@ -1,6 +1,6 @@
 {
   "name": "screenres",
-  "version": "2.0.3-rc1",
+  "version": "2.0.0",
   "scripts": {
     "configure": "node-gyp configure",
     "build": "node-gyp build",
@@ -17,7 +17,8 @@
     "nan": "^2.0.9"
   },
   "gypfile": true,
-  "description": "Get and set screen resolutions",
+  "description": "Cross platform screen resolution module and CLI too",
+  "keywords": ["screen", "resolution", "screen resolution", "macOS", "OS X", "Windows", "Linux"],
   "main": "index.js",
   "directories": {
     "test": "test"

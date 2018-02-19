@@ -1,17 +1,13 @@
-
 # screenres
 
-Get and set screen resolutions
-
-NOTE - ONLY LINUX SUPPORTED AT PRESENT ON NEXT
-FOR OS X SUPPORT ON NODE 0.10 ONLY INSTALL screenres 1.x.x
+Cross platform screen resolution module and CLI tool
 
 ## Usage
 
 ### Programmatic
 
 ```sh
-$ npm install screenres@next --save
+$ npm install screenres --save
 ```
 
 #### get
@@ -47,7 +43,6 @@ $ screenres
 1440x900
 ```
 
-
 #### set
 
 ```sh
@@ -56,40 +51,15 @@ $ screenres 800 600
 
 ## Platforms
 
-Currently only supports OS X, easy to add new platforms, see contributing
+* Windows
+* Linux 
+* macOS
 
-## Contributing
+## License
 
-It would be nice to have a multi-platform screen resolution tool.
+MIT
 
-It would also be super easy to make happen.
-
-If you'd like to add a new platform, write a c++ file named after the platform,
-(e.g. linux.cc). The file should include `headers.h` and implement two functions:
-
-```c++
-Resolution fetchRes();
-int changeRes(int h, int v);
-```
-
-`Resolution` is simply a struct with `height` and `width` `int`s.
-
-The new platform file should also check for platform, e.g.:
-
-```c++
-#ifdef _linux
- //linux screenres implementation
-#endif
-```
-
-Finally, add the new file to `bindings.gyp` in the `sources` array,
-and define any conditional configuration (e.g. like linked libraries).
-
-That should be it `npm run configure; npm run build`. 
-
-Then.. send a PR :)
-
-## Kudos
+## Acknowledgements
 
 Sponsored by [nearForm](http://nearform.com)
 

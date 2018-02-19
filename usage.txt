@@ -8,4 +8,4 @@
 
     With two arguments sets resolution horizontal and vertical dimensions
       
-      $ screenres 800 600 #changes screen resolution
+      $ screenres 800 600 # changes screen resolution
