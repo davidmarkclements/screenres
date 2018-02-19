@@ -2,7 +2,7 @@
     "targets": [
         {
             "target_name": "screenres",
-            "sources": ["linux.cc", "osx.cc", "screenres.cc"],
+            "sources": ["linux.cc", "osx.cc", "win.cc", "screenres.cc"],
             "include_dirs": [ "<!(node -e \"require('nan')\")" ]
         }],
     "conditions": [
