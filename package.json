@@ -18,7 +18,15 @@
   },
   "gypfile": true,
   "description": "Cross platform screen resolution module and CLI too",
-  "keywords": ["screen", "resolution", "screen resolution", "macOS", "OS X", "Windows", "Linux"],
+  "keywords": [
+    "screen",
+    "resolution",
+    "screen resolution",
+    "macOS",
+    "OS X",
+    "Windows",
+    "Linux"
+  ],
   "main": "index.js",
   "directories": {
     "test": "test"

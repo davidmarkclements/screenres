@@ -9,7 +9,10 @@
       [ "OS=='mac'",
         {
           "xcode_settings": {
-            "GCC_ENABLE_CPP_EXCEPTIONS": "YES"
+            "GCC_ENABLE_CPP_EXCEPTIONS": "YES",
+            'OTHER_CPLUSPLUSFLAGS':[
+              "-Wno-c++11-narrowing"
+            ]
           },
           "link_settings": {
             "libraries": [
