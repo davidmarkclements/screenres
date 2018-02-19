@@ -1,6 +1,6 @@
 {
   "name": "screenres",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "scripts": {
     "configure": "node-gyp configure",
     "build": "node-gyp build",
